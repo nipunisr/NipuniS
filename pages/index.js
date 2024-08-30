@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { AiFillLinkedin, AiFillMediumCircle, AiFillBehanceCircle, AiFillGithub } from 'react-icons/ai';
+import { AiFillLinkedin, AiFillMediumCircle, AiFillGithub,AiFillDribbbleCircle} from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -7,12 +7,14 @@ import ns from '../public/ns.jpg';
 import design from '../public/design.png';
 import code from '../public/code.png';
 import consulting from '../public/consulting.png';
-import my1 from '../public/my1.png';
+import my from '../public/my.png';
 import icon from '../public/icon.png';
 import pro1 from '../public/pro1.png';
-import F1 from '../public/F1.png';
+import F4 from '../public/F4.png';
 import F2 from '../public/F2.png';
 import emailjs from 'emailjs-com';
+import { AiFillCode, AiOutlineTool } from 'react-icons/ai';
+import { DiDatabase } from 'react-icons/di';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -104,9 +106,10 @@ export default function Home() {
             <a href="https://medium.com/@sathsaranipuni11" target="_blank" rel="noopener noreferrer">
               <AiFillMediumCircle />
             </a>
-            <a href="https://www.behance.net/nipunisranat" target="_blank" rel="noopener noreferrer">
-              <AiFillBehanceCircle />
+            <a href="https://dribbble.com/NipuniS" target="_blank" rel="noopener noreferrer">
+              <AiFillDribbbleCircle />
             </a>
+            
           </div>
 
           <div className="relative w-32 h-32 mx-auto mt-20 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 md:h-64 md:w-64">
@@ -200,8 +203,8 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="gap-10 lg:flex">
-            <div className="p-10 my-10 text-center shadow-lg rounded-xl dark:bg-white">
+          <div className="gap-10 lg:flex" >
+            <div className="p-10 my-10 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:bg-teal-100 hover:scale-105 dark:hover:bg-teal-100">
               <Image src={pro1} width={100} height={100} />
               <h3 className="pt-8 pb-2 text-lg font-medium">Rooftop Automated Green House (Group)</h3>
               <p>
@@ -214,7 +217,7 @@ export default function Home() {
               <p className="py-1 text-gray-800">Arduino</p>
               <p className="py-1 text-gray-800">Proteus</p>
             </div>
-            <div className="p-10 my-10 text-center shadow-lg rounded-xl dark:bg-white">
+            <div className="p-10 my-10 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:bg-teal-100 hover:scale-105 dark:hover:bg-teal-100">
               <Image src={code} width={100} height={100} />
               <h3 className="pt-8 pb-2 text-lg font-medium">Event Management System (Group)</h3>
               <p>
@@ -229,6 +232,47 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+      {/*Skills*/}
+      <section id="skills" className="my-20">
+      <div className="text-center">
+       <h3 className="py-1 text-3xl text-teal-600 dark:text-teal-400">Skills</h3>
+        <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
+         My skill set spans across various programming languages and design tools.
+        </p>
+      </div>
+    <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-3">
+    {/* Frontend Card */}
+    <div className="p-6 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:scale-105 hover:bg-teal-100 dark:hover:bg-teal-100">
+      <div className="flex justify-center mb-4 text-4xl text-teal-600">
+        <AiFillCode />
+      </div>
+      <h4 className="pb-2 text-lg font-medium text-teal-600">Frontend</h4>
+      <p className="text-gray-800 dark:text-gray-600">HTML<br/> CSS <br/> JavaScript<br/> React</p>
+    </div>
+
+    {/* Backend Card */}
+    <div className="p-6 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:scale-105 hover:bg-teal-100 dark:hover:bg-teal-100">
+      <div className="flex justify-center mb-4 text-4xl text-teal-600">
+        <DiDatabase />
+      </div>
+      <h4 className="pb-2 text-lg font-medium text-teal-600">Backend</h4>
+      <p className="text-gray-800 dark:text-gray-600">Node.js<br/> Express<br/> MySQL</p>
+    </div>
+
+    {/* Tools Card */}
+    <div className="p-6 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:scale-105 hover:bg-teal-100 dark:hover:bg-teal-100">
+      <div className="flex justify-center mb-4 text-4xl text-teal-600">
+        <AiOutlineTool />
+      </div>
+      <h4 className="pb-2 text-lg font-medium text-teal-600">Tools</h4>
+      <p className="text-gray-800 dark:text-gray-600">Git<br/> Figma<br/>VSCode</p>
+    </div>
+  </div>
+</section>
+
+
+        
 
         {/* Designs Section */}
         <section id="designs" className='flex items-center justify-center my-10'>
@@ -251,15 +295,25 @@ export default function Home() {
                 src={F2}
               />
             </div>
-            <div className="flex-1 basis-1/3">
+            <div className="flex-1 basis-1/4">
               <Image
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg max-h-90"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                src={my1}
+                src={my}
               />
             </div>
+            <div className="flex-1 basis-1/3">
+              <Image
+                className="object-cover rounded-lg max-h-90"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+                src={F4}
+              />
+            </div>
+            
           </div>
         </section>
 
@@ -333,7 +387,7 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/nipuni-s-ranathunga/" className="text-teal-600 hover:text-teal-400">LinkedIn</a>,{' '}
               <a href="https://github.com/nipunisr" className="text-teal-600 hover:text-teal-400">GitHub</a>,{' '}
               <a href="https://medium.com/@sathsaranipuni11" className="text-teal-600 hover:text-teal-400">Medium</a>,{' '}
-              <a href="https://www.behance.net/nipunisranat" className="text-teal-600 hover:text-teal-400">Behance</a>
+              <a href="https://dribbble.com/NipuniS" className="text-teal-600 hover:text-teal-400">Dribbble</a>
             </p>
           </div>
         </footer>
