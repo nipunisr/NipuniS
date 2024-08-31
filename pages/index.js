@@ -213,10 +213,10 @@ return (
   whileInView={{ opacity: 1 }}
   transition={{ duration: 1, delay: 0.5 }}
 >
-<Image src={ns} layout="fill" objectFit="cover" />
+<Image src={ns} layout="fill" objectFit="cover" alt="Nipuni S Ranathunga" />
 </motion.div>
     <p className="py-2 mt-8 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
-      Hello! I'm Nipuni S Ranathunga, an Information Technology & Management student at the University of Moratuwa with a love for coding and design.
+      Hello! I&apos;m Nipuni S Ranathunga, an Information Technology & Management student at the University of Moratuwa with a love for coding and design.
     </p>
     <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
       My journey in IT has equipped me with skills in various programming languages and design tools, allowing me to create engaging and efficient digital experiences.
@@ -258,7 +258,7 @@ return (
           >
             <div className="flex items-center mb-1">
               <div className="w-2 h-2 mr-2 bg-teal-500 rounded-full"></div>
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">G.C.E. Advance Level-2020</h4>
+              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">G.C.E. Advance Level &apos;2020&apos;</h4>
             </div>
             <p className="text-gray-600 dark:text-gray-400">R/Sivali Central College, Ratnapura<br />Stream: Commerce<br />Z Score: 1.8755</p>
           </motion.div>
@@ -275,7 +275,7 @@ return (
               <div className="w-2 h-2 mr-2 bg-teal-500 rounded-full"></div>
               <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">G.C.E. Ordinary Level-2017</h4>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">R/Gamini Central College, Kalawana<br />9 A's including ICT, Commerce & Music</p>
+            <p className="text-gray-600 dark:text-gray-400">R/Gamini Central College, Kalawana<br />9 A&apos;s including ICT, Commerce & Music</p>
           </motion.div>
         </div>
       </div>
@@ -355,7 +355,7 @@ return (
           className="p-10 my-10 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:bg-teal-100 hover:scale-105 dark:hover:bg-teal-100"
           variants={cardVariants}
         >
-          <Image src={pro1} width={100} height={100} />
+          <Image src={pro1} width={100} height={100} alt="Nipuni S Ranathunga"/>
           <h3 className="pt-8 pb-2 text-lg font-medium">Rooftop Automated Green House (Group)</h3>
           <p>
             Design an efficient greenhouse with Automatic Water Tank Filling System, Automated Plant Irrigation, Rooftop Surface Water Flow, Custom Curtain System, Humidity and Temperature Monitoring and Displaying in real-time.
@@ -371,7 +371,7 @@ return (
           className="p-10 my-10 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:bg-teal-100 hover:scale-105 dark:hover:bg-teal-100"
           variants={cardVariants}
         >
-          <Image src={code} width={100} height={100} />
+          <Image src={code} width={100} height={100} alt="Nipuni S Ranathunga"/>
           <h3 className="pt-8 pb-2 text-lg font-medium">Event Management System (Group)</h3>
           <p>
             Enable organizers to manage events effectively and attendees to connect with events. This system features event registration, ticket purchasing, personalized profiles, secure payment capabilities, reporting system and real-time chat.
@@ -473,6 +473,7 @@ return (
             height={"100%"}
             layout="responsive"
             src={F2}
+            alt="Nipuni S Ranathunga"
           />
         </motion.div>
         <motion.div
@@ -487,6 +488,7 @@ return (
             height={"100%"}
             layout="responsive"
             src={my}
+            alt="Nipuni S Ranathunga"
           />
         </motion.div>
         <motion.div
@@ -501,6 +503,7 @@ return (
             height={"100%"}
             layout="responsive"
             src={F4}
+            alt="Nipuni S Ranathunga"
           />
         </motion.div>
       </div>
