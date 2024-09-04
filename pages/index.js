@@ -100,14 +100,15 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+
 return (
   <div className={darkMode ? 'dark' : ''}>
     <Head>
       <title>Nipuni S</title>
-      <meta name="description" content="Home page" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/icon.png" />
     </Head>
-    <main className="px-10 bg-white md:px-20 lg:px-40 dark:bg-gray-900">
+    <main className="px-4 bg-white sm:px-6 md:px-10 lg:px-20 xl:px-40 dark:bg-gray-900">
       <motion.section  
         className="min-h-screen"
         initial={{ opacity: 0 }}
@@ -115,54 +116,38 @@ return (
         transition={{ duration: 1 }}
       >
         <motion.nav 
-          className="sticky top-0 z-50 flex justify-between py-6 mb-12 bg-white dark:bg-gray-900 dark:text-white"
-          initial="hidden"
-          animate="visible"
-          variants={navVariants}
-        >
-          <h1 className="text-xl font-burtons">developedbyns</h1>
-          <motion.ul 
-            className="flex items-center max-w-lg space-x-4 md:text-xl"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
-            }}
-          >
-            {['About Me', 'Education', 'Projects', 'Designs', 'Contact'].map((item, index) => (
-              <motion.li key={index} variants={itemVariants}>
-                <a href={`#${item.toLowerCase().replace(' ', '')}`} className="text-teal-700">{item}</a>
-              </motion.li>
-            ))}
-          </motion.ul>
+  className="sticky top-0 z-50 flex flex-row justify-between items-center py-4 px-6 mb-12 bg-white dark:bg-gray-900 dark:text-white">
+  <div className="flex items-center">
+    <h1 className="text-lg md:text-xl font-burtons">developedbyns</h1>
+  </div>
+  <div className="flex items-center space-x-4">
+    <li>
+      <BsFillMoonStarsFill
+        onClick={() => setDarkMode(!darkMode)}
+        className="text-xl md:text-2xl cursor-pointer"
+      />
+    </li>
+    <li>
+      <a
+        className="px-3 py-2 md:px-4 md:py-3 text-white rounded-md bg-gradient-to-r from-cyan-700 to-teal-700 hover:from-teal-700 hover:to-cyan-700"
+        href="/resume.pdf" 
+        download
+      >
+        Resume
+      </a>
+    </li>
+  </div>
+</motion.nav>
 
-          <ul className="flex items-center">
-            <li>
-              <BsFillMoonStarsFill
-                onClick={() => setDarkMode(!darkMode)}
-                className="text-2xl cursor-pointer"
-              />
-            </li>
-            <li>
-              <a
-                className="px-4 py-3 ml-8 text-white rounded-md bg-gradient-to-r from-cyan-700 to-teal-700"
-                href="/resume.pdf" 
-                download
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-        </motion.nav>
 {/*Name section */}
-          <motion.div
+  <motion.div
+  id='home'
   className="p-10 text-center"
   initial="hidden"
   whileInView="visible"
   variants={containerAnimation}
 >
-  <h2 className="py-2 text-5xl font-medium text-teal-600 md:text-6xl dark:text-teal-400">
+  <h2 className="py-2 text-4xl font-medium text-teal-600 md:text-5xl lg:text-6xl dark:text-teal-400">
     {Array.from("Nipuni S Ranathunga").map((letter, index) => (
       <motion.span key={index} variants={letterAnimation}>
         {letter}
@@ -176,47 +161,51 @@ return (
     <br /> University of Moratuwa.
   </p>
 </motion.div>
-
 {/* Social Links */}
 <motion.div 
-  className="flex justify-center gap-16 py-3 text-5xl text-gray-600 dark:text-gray-400"
+  className="flex justify-center gap-8 py-3 text-4xl text-gray-600 md:gap-12 lg:gap-16 md:text-5xl dark:text-gray-400"
   initial={{ scale: 0 }}
   whileInView={{ scale: 1 }}
   transition={{ duration: 0.5, delay: 0.8 }}
 >
   <a href="https://www.linkedin.com/in/nipuni-s-ranathunga/" target="_blank" rel="noopener noreferrer">
-    <AiFillLinkedin />
+    <AiFillLinkedin className="transition-transform transform hover:scale-110" />
   </a>
   <a href="https://github.com/nipunisr" target="_blank" rel="noopener noreferrer">
-    <AiFillGithub />
+    <AiFillGithub className="transition-transform transform hover:scale-110" />
   </a>
   <a href="https://medium.com/@sathsaranipuni11" target="_blank" rel="noopener noreferrer">
-    <AiFillMediumCircle />
+    <AiFillMediumCircle className="transition-transform transform hover:scale-110" />
   </a>
   <a href="https://dribbble.com/NipuniS" target="_blank" rel="noopener noreferrer">
-    <AiFillDribbbleCircle />
+    <AiFillDribbbleCircle className="transition-transform transform hover:scale-110" />
   </a>
 </motion.div>
         {/* About Me Section */}
   <motion.section 
-  id="about" 
   className="flex items-center justify-center my-20"
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5 }}
 >
   <div className="text-center">
-    <h3 className="py-1 pb-4 text-4xl text-teal-600 dark:text-teal-400">About Me</h3>
+    <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">About Me</h3>
     <motion.div 
   className="relative w-32 h-32 mx-auto mt-10 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 md:h-64 md:w-64"
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   transition={{ duration: 1, delay: 0.5 }}
 >
-<Image src={ns} layout="fill" objectFit="cover" alt="Nipuni S Ranathunga" />
+<Image
+  src="/_next/static/media/ns.679dadbd.jpg"
+  alt="Description of the image"
+  fill
+  sizes="100vw"
+  style={{ objectFit: 'cover' }}
+/>
 </motion.div>
     <p className="py-2 mt-8 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
-      Hello! I&apos;m Nipuni S Ranathunga, an Information Technology & Management student at the University of Moratuwa with a love for coding and design.
+      Hello! I&apos;m Nipuni Sathsara Ranathunga, an Information Technology & Management student at the University of Moratuwa with a love for coding and design.
     </p>
     <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
       My journey in IT has equipped me with skills in various programming languages and design tools, allowing me to create engaging and efficient digital experiences.
@@ -226,9 +215,9 @@ return (
 
         {/* Education Section */}
 <section id="education" className='my-20'>
-  <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
     <div>
-      <h3 className="py-1 text-4xl text-teal-600 dark:text-teal-400">Education</h3>
+      <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Education</h3>
       <div className="relative mt-10 ml-4">
         <div className="border-l-4 border-teal-500">
           {/* Educational Entries */}
@@ -282,7 +271,7 @@ return (
     </div>
 
     <div>
-      <h3 className="py-1 text-4xl text-teal-600 dark:text-teal-400">Experience</h3>
+      <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Experience</h3>
       <div className="relative mt-10 ml-4">
         <div className="border-l-4 border-teal-500">
           {/* Experience Entries */}
@@ -337,7 +326,7 @@ return (
         variants={fadeInUp}
       >
         <div className='text-center'>
-          <h3 className="py-1 text-4xl text-teal-600 dark:text-teal-400">Projects</h3>
+          <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Projects</h3>
           <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
             Throughout my journey in the world of technology and design, I have had the opportunity to work on a variety of projects that have honed my skills and expanded my knowledge.
           </p>
@@ -393,7 +382,7 @@ return (
         whileInView="visible"
         variants={containerVariants}
       >
-        <h3 className="py-1 text-4xl text-teal-600 dark:text-teal-400">Skills</h3>
+        <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Skills</h3>
         <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
           My skill set spans across various programming languages and design tools.
         </p>
@@ -441,9 +430,7 @@ return (
           <p className="text-gray-800 dark:text-gray-600">Git<br /> Figma<br /> VSCode</p>
         </motion.div>
       </div>
-    </section>
-
-       
+    </section>    
         {/* Designs Section */}
         <section id="designs" className='flex items-center justify-center my-10'>
           <motion.div 
@@ -452,7 +439,7 @@ return (
           whileInView="visible"
           variants={containerVariants}>
          
-            <h3 className="py-1 text-4xl text-teal-600 dark:text-teal-400">My Designs</h3>
+            <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">My Designs</h3>
             <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
               My passion for design has led me to create numerous projects, each one challenging me to push the boundaries of creativity and functionality.
             </p>
@@ -461,61 +448,61 @@ return (
 
         <section>
       <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-        <motion.div
-          className="flex-1 basis-1/3"
-          initial="hidden"
-          whileInView="visible"
-          variants={imageVariants}
-        >
-          <Image
-            className="object-cover rounded-lg"
-            width={"100%"}
-            height={"100%"}
-            layout="responsive"
-            src={F2}
-            alt="Nipuni S Ranathunga"
-          />
-        </motion.div>
-        <motion.div
-          className="flex-1 basis-1/4"
-          initial="hidden"
-          whileInView="visible"
-          variants={imageVariants}
-        >
-          <Image
-            className="object-cover rounded-lg max-h-90"
-            width={"100%"}
-            height={"100%"}
-            layout="responsive"
-            src={my}
-            alt="Nipuni S Ranathunga"
-          />
-        </motion.div>
-        <motion.div
-          className="flex-1 basis-1/3"
-          initial="hidden"
-          whileInView="visible"
-          variants={imageVariants}
-        >
-          <Image
-            className="object-cover rounded-lg max-h-90"
-            width={"100%"}
-            height={"100%"}
-            layout="responsive"
-            src={F4}
-            alt="Nipuni S Ranathunga"
-          />
-        </motion.div>
+      <motion.div
+  className="flex-1 basis-1/3"
+  initial="hidden"
+  whileInView="visible"
+  variants={imageVariants}
+>
+  <Image
+    className="object-cover w-full h-auto rounded-lg"
+    src={F2}
+    alt="Design 1"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    width={500}  // Set an appropriate base width
+    height={300} 
+  />
+</motion.div>
+<motion.div
+  className="flex-1 basis-1/4"
+  initial="hidden"
+  whileInView="visible"
+  variants={imageVariants}
+>
+  <Image
+    className="object-cover w-full h-auto rounded-lg"
+    src={my}
+    alt="Design 2"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    width={500}  // Set an appropriate base width
+    height={300}
+  />
+</motion.div>
+<motion.div
+  className="flex-1 basis-1/3"
+  initial="hidden"
+  whileInView="visible"
+  variants={imageVariants}
+>
+  <Image
+    className="object-cover w-full h-auto rounded-lg"
+    src={F4}
+    alt="Design 3"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    width={500}  // Set an appropriate base width
+    height={300}
+  />
+</motion.div>
       </div>
     </section>
 
         
        {/* Contact Me Section */}
 <section id="contact" className='my-20'>
-  <div className="flex flex-col items-center justify-center px-10">
+  <div className="flex flex-col items-center justify-center px-4 sm:px-6 md:px-10">
     {/* Contact Form */}
-    <div className='w-full mb-10 text-center md:w-1/2'>
-      <h3 className="py-1 mb-10 text-4xl text-teal-600 dark:text-teal-400">Contact Me</h3>
+    <div className='w-full mx-auto mb-10 text-center md:w-2/3 lg:w-1/2'>
+      <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Contact Me</h3>
       <motion.form 
         onSubmit={handleSubmit} 
         className="flex flex-col"
@@ -579,7 +566,7 @@ return (
         />
         <button
           type="submit"
-          className="px-4 py-2 text-white bg-teal-500 rounded hover:bg-teal-600"
+          className="px-4 py-3 text-lg text-white bg-teal-500 rounded hover:bg-teal-600 md:text-xl"
         >
           Send
         </button>
@@ -588,12 +575,28 @@ return (
 
     {/* Contact Information */}
     <div className='w-full text-center md:w-1/2'>
-      <p className="text-gray-800 dark:text-gray-200">
-        <strong>Email:</strong> sathsaranipuni11@gmail.com
+    <p className="text-sm leading-7 text-gray-800 dark:text-gray-200 sm:text-base md:text-lg lg:text-xl md:leading-8">
+  <strong>Email : </strong> 
+  <a 
+    href="mailto:ranathungakns@gmail.com" 
+    className="text-gray-800 hover:underline dark:text-gray-200"
+  >
+    ranathungakns@gmail.com
+  </a>
+</p>
+
+      <p className="text-sm leading-7 text-gray-800 dark:text-gray-200 sm:text-base md:text-lg lg:text-xl md:leading-8">
+        <strong>Address :</strong> Katubedda, Moratuwa
       </p>
-      <p className="text-gray-800 dark:text-gray-200">
-        <strong>Address:</strong> Katubedda, Moratuwa
-      </p>
+      <p className="text-sm leading-7 text-gray-800 dark:text-gray-200 sm:text-base md:text-lg lg:text-xl md:leading-8">
+  <strong>Mobile : </strong> 
+  <a 
+    href="tel:+1234567890" 
+    className="text-gray-800 dark:text-gray-200 hover:underline"
+  >
+    +94 71 515 1853
+  </a>
+</p>
     </div>
   </div>
 </section>
