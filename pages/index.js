@@ -130,7 +130,7 @@ return (
     <li>
       <a
         className="px-3 py-2 text-white rounded-md md:px-4 md:py-3 bg-gradient-to-r from-cyan-700 to-teal-700 hover:from-teal-700 hover:to-cyan-700"
-        href="/resume.pdf" 
+        href="/NipuniS.pdf" 
         download
       >
         Resume
