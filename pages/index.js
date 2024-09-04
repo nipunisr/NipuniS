@@ -116,7 +116,7 @@ return (
         transition={{ duration: 1 }}
       >
         <motion.nav 
-  className="sticky top-0 z-50 flex flex-row justify-between items-center py-4 px-6 mb-12 bg-white dark:bg-gray-900 dark:text-white">
+  className="sticky top-0 z-50 flex flex-row items-center justify-between px-6 py-4 mb-12 bg-white dark:bg-gray-900 dark:text-white">
   <div className="flex items-center">
     <h1 className="text-lg md:text-xl font-burtons">developedbyns</h1>
   </div>
@@ -124,12 +124,12 @@ return (
     <li>
       <BsFillMoonStarsFill
         onClick={() => setDarkMode(!darkMode)}
-        className="text-xl md:text-2xl cursor-pointer"
+        className="text-xl cursor-pointer md:text-2xl"
       />
     </li>
     <li>
       <a
-        className="px-3 py-2 md:px-4 md:py-3 text-white rounded-md bg-gradient-to-r from-cyan-700 to-teal-700 hover:from-teal-700 hover:to-cyan-700"
+        className="px-3 py-2 text-white rounded-md md:px-4 md:py-3 bg-gradient-to-r from-cyan-700 to-teal-700 hover:from-teal-700 hover:to-cyan-700"
         href="/resume.pdf" 
         download
       >
@@ -189,7 +189,7 @@ return (
   transition={{ duration: 0.5 }}
 >
   <div className="text-center">
-    <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">About Me</h3>
+    <h3 className="py-1 mb-10 font-semibold text-teal-600 lg:text-5xl md:text-4xl dark:text-teal-400">About Me</h3>
     <motion.div 
   className="relative w-32 h-32 mx-auto mt-10 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 md:h-64 md:w-64"
   initial={{ opacity: 0 }}
@@ -217,7 +217,7 @@ return (
 <section id="education" className='my-20'>
   <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
     <div>
-      <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Education</h3>
+      <h3 className="py-1 mb-10 font-semibold text-teal-600 lg:text-5xl md:text-4xl dark:text-teal-400">Education</h3>
       <div className="relative mt-10 ml-4">
         <div className="border-l-4 border-teal-500">
           {/* Educational Entries */}
@@ -271,7 +271,7 @@ return (
     </div>
 
     <div>
-      <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Experience</h3>
+      <h3 className="py-1 mb-10 font-semibold text-teal-600 lg:text-5xl md:text-4xl dark:text-teal-400">Experience</h3>
       <div className="relative mt-10 ml-4">
         <div className="border-l-4 border-teal-500">
           {/* Experience Entries */}
@@ -326,7 +326,7 @@ return (
         variants={fadeInUp}
       >
         <div className='text-center'>
-          <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Projects</h3>
+          <h3 className="py-1 mb-10 font-semibold text-teal-600 lg:text-5xl md:text-4xl dark:text-teal-400">Projects</h3>
           <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
             Throughout my journey in the world of technology and design, I have had the opportunity to work on a variety of projects that have honed my skills and expanded my knowledge.
           </p>
@@ -382,7 +382,7 @@ return (
         whileInView="visible"
         variants={containerVariants}
       >
-        <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Skills</h3>
+        <h3 className="py-1 mb-10 font-semibold text-teal-600 lg:text-5xl md:text-4xl dark:text-teal-400">Skills</h3>
         <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
           My skill set spans across various programming languages and design tools.
         </p>
@@ -439,7 +439,7 @@ return (
           whileInView="visible"
           variants={containerVariants}>
          
-            <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">My Designs</h3>
+            <h3 className="py-1 mb-10 font-semibold text-teal-600 lg:text-5xl md:text-4xl dark:text-teal-400">My Designs</h3>
             <p className="py-2 leading-8 text-gray-800 text-md md:text-xl dark:text-gray-200">
               My passion for design has led me to create numerous projects, each one challenging me to push the boundaries of creativity and functionality.
             </p>
@@ -502,7 +502,7 @@ return (
   <div className="flex flex-col items-center justify-center px-4 sm:px-6 md:px-10">
     {/* Contact Form */}
     <div className='w-full mx-auto mb-10 text-center md:w-2/3 lg:w-1/2'>
-      <h3 className="py-1 mb-10 lg:text-5xl text-teal-600 md:text-4xl dark:text-teal-400 font-semibold">Contact Me</h3>
+      <h3 className="py-1 mb-10 font-semibold text-teal-600 lg:text-5xl md:text-4xl dark:text-teal-400">Contact Me</h3>
       <motion.form 
         onSubmit={handleSubmit} 
         className="flex flex-col"
@@ -591,7 +591,7 @@ return (
       <p className="text-sm leading-7 text-gray-800 dark:text-gray-200 sm:text-base md:text-lg lg:text-xl md:leading-8">
   <strong>Mobile : </strong> 
   <a 
-    href="tel:+1234567890" 
+    href="tel:+94715151853" 
     className="text-gray-800 dark:text-gray-200 hover:underline"
   >
     +94 71 515 1853
