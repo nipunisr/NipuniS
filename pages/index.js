@@ -4,16 +4,13 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
 import { motion, Variants, Transition, AnimationControls } from 'framer-motion';
 import Image from 'next/image';
-import ns from '../public/ns.jpg';
-import design from '../public/design.png';
 import code from '../public/code.png';
-import consulting from '../public/consulting.png';
 import my from '../public/my.png';
 import icon from '../public/icon.png';
 import pro1 from '../public/pro1.png';
 import F4 from '../public/F4.png';
 import F2 from '../public/F2.png';
-
+import dp6 from '../public/dp6.png';
 import emailjs from 'emailjs-com';
 import { AiFillCode, AiOutlineTool } from 'react-icons/ai';
 import { DiDatabase } from 'react-icons/di';
@@ -198,8 +195,8 @@ return (
   transition={{ duration: 1, delay: 0.5 }}
 >
 <Image
-  src="/_next/static/media/ns.679dadbd.jpg"
-  alt="Description of the image"
+  src="/_next/static/media/dp6.575a1160.png"
+  alt="Mypic"
   fill
   sizes="100vw"
   style={{ objectFit: 'cover' }}
