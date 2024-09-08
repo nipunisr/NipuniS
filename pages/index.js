@@ -13,6 +13,7 @@ import icon from '../public/icon.png';
 import pro1 from '../public/pro1.png';
 import F4 from '../public/F4.png';
 import F2 from '../public/F2.png';
+
 import emailjs from 'emailjs-com';
 import { AiFillCode, AiOutlineTool } from 'react-icons/ai';
 import { DiDatabase } from 'react-icons/di';
@@ -130,7 +131,7 @@ return (
     <li>
       <a
         className="px-3 py-2 text-white rounded-md md:px-4 md:py-3 bg-gradient-to-r from-cyan-700 to-teal-700 hover:from-teal-700 hover:to-cyan-700"
-        href="/NipuniS.pdf" 
+        href="/Nipuni_Sathsara.pdf" 
         download
       >
         Resume
