@@ -11,6 +11,7 @@ import pro1 from '../public/pro1.png';
 import F4 from '../public/F4.png';
 import F2 from '../public/F2.png';
 import dp6 from '../public/dp6.png';
+import dp7 from '../public/dp7.png';
 import emailjs from 'emailjs-com';
 import { AiFillCode, AiOutlineTool } from 'react-icons/ai';
 import { DiDatabase } from 'react-icons/di';
@@ -128,7 +129,7 @@ return (
     <li>
       <a
         className="px-3 py-2 text-white rounded-md md:px-4 md:py-3 bg-gradient-to-r from-cyan-700 to-teal-700 hover:from-teal-700 hover:to-cyan-700"
-        href="/Nipuni_Sathsara.pdf" 
+        href="/CV_Nipuni.pdf" 
         download
       >
         Resume
@@ -195,7 +196,7 @@ return (
   transition={{ duration: 1, delay: 0.5 }}
 >
 <Image
-  src="/_next/static/media/dp6.575a1160.png"
+  src="/_next/static/media/dp7.e9e24230.png"
   alt="Mypic"
   fill
   sizes="100vw"
