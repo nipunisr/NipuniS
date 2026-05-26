@@ -158,6 +158,7 @@ return (
   <p className="max-w-lg py-5 mx-auto leading-8 text-gray-800 text-medium md:text-xl dark:text-gray-200">
     BSc Hons in Information Technology & Management.
     <br /> University of Moratuwa.
+    <br /> ISTQB CTFL
   </p>
 </motion.div>
 {/* Social Links */}
@@ -196,7 +197,7 @@ return (
   transition={{ duration: 1, delay: 0.5 }}
 >
 <Image
-  src="/_next/static/media/dp7.e9e24230.png"
+  src="/dp7.png"
   alt="Mypic"
   fill
   sizes="100vw"
@@ -285,30 +286,18 @@ return (
           >
             <div className="flex items-center mb-1">
               <div className="w-2 h-2 mr-2 bg-teal-500 rounded-full"></div>
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Intern</h4>
+              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">QA Engineer Internship</h4>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">Peoples Bank (2021 - 2022)</p>
+            <p className="text-gray-600 dark:text-gray-400">Eleos Web Pvt Ltd (2025 - 2026)</p>
             <ul className="mt-2 text-gray-600 list-disc list-inside dark:text-gray-400">
-              <li>Enhanced problem-solving abilities by quickly identifying and addressing issues</li>
-              <li>Collaborated with colleagues to achieve team goals.</li>
-            </ul>
-          </motion.div>
-          <motion.div 
-            className="mb-8 ml-4"
-            initial="hidden"
-            whileInView="visible"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-            }}
-          >
-            <div className="flex items-center mb-1">
-              <div className="w-2 h-2 mr-2 bg-teal-500 rounded-full"></div>
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Customer Outreach Executive</h4>
-            </div>
-            <p className="text-gray-600 dark:text-gray-400">StageYou.Inc (2023)</p>
-            <ul className="mt-2 text-gray-600 list-disc list-inside dark:text-gray-400">
-              <li>Analyzing customer data to identify trends & preferences</li>
+              <li>Conducted manual and automated testing for software systems, with a strong emphasis on Point-ofSale (POS)applications, ensuring system reliability and accuracy.</li> 
+              <li>Developed and maintained test cases and automation scripts using Playwright and JavaScript to validate UI and functional workflows.</li> 
+              <li>Performed thorough API testing to ensure backend integrity and seamless integration between services.</li>
+              <li>Collaborated with development teams to identify,report,and track bugs,while supporting continuous improvement in an Agile environment.</li> 
+              <li>Assisted in test documentation including test plans and reports,and gained hands-on experience with Jenkins CI/CD pipelines andversion control using GitLab.</li> 
+              <li>Technologies and Tools- Playwright,JavaScript, GitLab, Excel, Jira </li>
+              <li>Testing Types- Manual Testing,Automation Testing,API Testing,Functional Testing,UI Testing, Regression Testing, Smoke Testing</li>
+              
             </ul>
           </motion.div>
         </div>
@@ -339,6 +328,24 @@ return (
         whileInView="visible"
         variants={containerVariants}
       >
+
+        <motion.div
+          className="p-10 my-10 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:bg-teal-100 hover:scale-105 dark:hover:bg-teal-100"
+          variants={cardVariants}
+        >
+          <Image src={pro1} width={100} height={100} alt="Nipuni S Ranathunga"/>
+          <h3 className="pt-8 pb-2 text-lg font-medium">Predictive  Analytics  for  Honeybee Colony Management(Research Project)</h3>
+          <p>
+          Developing a predictive framework using multivariate hive time series data (temperature, humidity, CO₂, weight) to forecast brood health deterioration, swarming, and absconding, while optimizing honey harvest timing.
+          </p>
+          <h4 className="py-4 text-teal-600">Contribution</h4>
+          <p className="py-1 text-gray-800">Harvest Timing Optimizer module : dual output prediction (urgency index + harvest window) using weighted HUI formula and multi-output XGBoost regression.</p>
+          <h4 className="py-4 text-teal-600">Technologies I Used</h4>
+          <p className="py-1 text-gray-800">Python</p>
+          <p className="py-1 text-gray-800">XGBoost</p>
+          <p className="py-1 text-gray-800">Fast API</p>
+          <p className="py-1 text-gray-800">PostgreSQL</p>
+        </motion.div>
         <motion.div
           className="p-10 my-10 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:bg-teal-100 hover:scale-105 dark:hover:bg-teal-100"
           variants={cardVariants}
@@ -366,6 +373,19 @@ return (
           </p>
           <h4 className="py-4 text-teal-600">Contribution</h4>
           <p className="py-1 text-gray-800">Ticket Management</p>
+          <h4 className="py-4 text-teal-600">Technologies I Used</h4>
+          <p className="py-1 text-gray-800">React</p>
+          <p className="py-1 text-gray-800">Node.js</p>
+          <p className="py-1 text-gray-800">MySQL</p>
+        </motion.div>
+        <motion.div
+          className="p-10 my-10 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:bg-teal-100 hover:scale-105 dark:hover:bg-teal-100"
+          variants={cardVariants}
+        >
+          <Image src={code} width={100} height={100} alt="Nipuni S Ranathunga"/>
+          <h3 className="pt-8 pb-2 text-lg font-medium">Skill-Based Volunteer Matching Platform</h3>
+          <p>
+          Develop a platform that connects individuals with specific skills to volunteer opportunities that match their expertise, helping organizations find the right volunteers for their needs.</p>
           <h4 className="py-4 text-teal-600">Technologies I Used</h4>
           <p className="py-1 text-gray-800">React</p>
           <p className="py-1 text-gray-800">Node.js</p>
@@ -415,6 +435,35 @@ return (
           <p className="text-gray-800 dark:text-gray-600">Node.js<br /> Express<br /> MySQL</p>
         </motion.div>
 
+        {/* Automation Card */}
+        <motion.div
+          className="p-6 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:scale-105 hover:bg-teal-100 dark:hover:bg-teal-100"
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <div className="flex justify-center mb-4 text-4xl text-teal-600">
+            <AiFillCode />
+          </div>
+          <h4 className="pb-2 text-lg font-medium text-teal-600">Automation</h4>
+          <p className="text-gray-800 dark:text-gray-600">Selenium WebDriver<br /> Playwright <br /> Seranity BDD<br /></p>
+        </motion.div>
+
+        {/* DB Card */}
+        <motion.div
+          className="p-6 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:scale-105 hover:bg-teal-100 dark:hover:bg-teal-100"
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <div className="flex justify-center mb-4 text-4xl text-teal-600">
+            <AiOutlineTool />
+          </div>
+          <h4 className="pb-2 text-lg font-medium text-teal-600">Databases</h4>
+          <p className="text-gray-800 dark:text-gray-600">MySql<br /> PostgreSQL<br />MongoDB</p>
+        </motion.div>
+
+        
         {/* Tools Card */}
         <motion.div
           className="p-6 text-center transition duration-500 transform shadow-lg rounded-xl dark:bg-white hover:scale-105 hover:bg-teal-100 dark:hover:bg-teal-100"
@@ -425,8 +474,8 @@ return (
           <div className="flex justify-center mb-4 text-4xl text-teal-600">
             <AiOutlineTool />
           </div>
-          <h4 className="pb-2 text-lg font-medium text-teal-600">Tools</h4>
-          <p className="text-gray-800 dark:text-gray-600">Git<br /> Figma<br /> VSCode</p>
+          <h4 className="pb-2 text-lg font-medium text-teal-600">Other</h4>
+          <p className="text-gray-800 dark:text-gray-600">Git<br /> Postman<br />Figma<br/>Jira<br />Confluence</p>
         </motion.div>
       </div>
     </section>    
@@ -593,7 +642,7 @@ return (
     href="tel:+94715151853" 
     className="text-gray-800 dark:text-gray-200 hover:underline"
   >
-    +94 71 515 1853
+    +94 70 188 8496
   </a>
 </p>
     </div>
@@ -603,7 +652,7 @@ return (
         {/* Footer */}
         <footer className="py-6 text-center text-gray-600 bg-white dark:bg-gray-900 dark:text-gray-400">
           <div className="container mx-auto">
-            <p>&copy; 2024 Nipuni S Ranathunga. All rights reserved.</p>
+            <p>&copy; 2026 Nipuni S Ranathunga. All rights reserved.</p>
             <p>
               Follow me on{' '}
               <a href="https://www.linkedin.com/in/nipuni-s-ranathunga/" className="text-teal-600 hover:text-teal-400">LinkedIn</a>,{' '}
